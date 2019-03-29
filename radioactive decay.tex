@@ -1,0 +1,298 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx,float}
+\usepackage{subcaption}
+\usepackage{float}
+\begin{document}
+	\author{\textbf{Onuray SANCAR}}
+	\title{\textbf{Experiment 7, Radioactive Decay}}
+	\date{March 29, 2019}
+	\maketitle
+	\textit{with} {\large\textbf{{Yaren AKSEL}}\textit{,} \textbf{Experiment Date}:March 22, 2019\\[3\baselineskip]
+		\textbf{Abstract}\\[\baselineskip]
+		\par In this experiment we found the half life of $^{220}$Rn gas via observing the decay of $^{232}$Th salt. Decaying of elements is an exponential process . By using this information, we found the half life of the $^{220}$Rn from the decaying constant $\lambda$.
+		\\[\baselineskip]
+		\textbf{Theory}\\[\baselineskip]
+		\par Unstable or stable atoms lose energy by emitting $\gamma$, $\alpha$, $\beta$ and other types of rays in a random process. Stable atoms are atoms that have half life longer than 10 years. Although we may never know when an atom will decay, we can know when high number of atoms will decay to half of its previous quantity. The term half life is meaningful only when we have high number of atoms at hand. 
+		Decaying process is, as said earlier in the abstract, an exponential process:
+		\begin{center}
+		\begin{equation}
+		N(t)=N_{0}.e^{-{\lambda}t}
+		\end{equation} 
+		\end{center} 
+	\par Where $N_0$ is the initial number of atoms in consideration, N(t) is the number of isotops ,$^{220}$Rn in this case, left at time t. $\lambda$ is the decaying constant and it is different for different isotops and atoms.
+	\newpage
+	\par From this relation we can find the half life $t_{\frac{1}{2}}$:
+		
+		\begin{equation}
+		\frac{N_0}{2}=N_{0}.e^{-{\lambda}t_{\frac{1}{2}}}
+		\end{equation} 
+
+
+		\begin{equation}
+	\frac{1}{2}=e^{-{\lambda}t_{\frac{1}{2}}}
+	\end{equation} 
+\begin{center}
+\begin{equation}
+ln\frac{1}{2}=-\lambda.t_{\frac{1}{2}}
+\end{equation} 
+ \begin{equation}
+ \frac{ln2}{\lambda}=t_{\frac{1}{2}}
+ \end{equation}
+\end{center}
+
+\par To find $t_{\frac{1}{2}}$ all we need to do is to find $\lambda$. To find $\lambda$,we use Wulf's electroscope. Wulf's electroscope is an intsrument that discharges when it reaches certain and amount of charge and that amount is the same in every discharge (constant Q needed). Then from the relation between the current  and the charge ($I=\frac{dq}{dt}=\frac{Q}{s}$) we know that the current is inversely proportional to the elapsed time between the discharges:
+\begin{center}
+\begin{equation}
+I\propto \frac{1}{s}
+\end{equation}
+\end{center}
+\par where $s=t_{i+1}-t_i$ and $t_i$s are the times we observe discharges.
+\\[\baselineskip]
+\par To find the relation between I and N(t) we look at the derivative of N with respect to t:
+\begin{center}
+	\begin{equation}
+	\frac{dN}{dt}=-\lambda {N}_{0}{e}^{-\lambda t}=-\lambda N\left(t\right)
+	\end{equation}
+\end{center}
+ Then $I\propto \frac{dN}{dt} \propto N \propto \frac{1}{s}$ and we find:
+
+  	\begin{equation}
+  	ln(\frac{1}{s})=ln(\frac{1}{s_0})-\lambda.t
+  	\end{equation}
+ \begin{equation}
+ ln(s)=ln(s_0)+\lambda.t
+ \end{equation}
+ \par So the slope of the t versus ln(s) graph will give us the desired $\lambda$!
+\newpage
+\par Other relations that will be useful later in the analysis:
+\\[\baselineskip]
+\par Weighted aritmetic mean:
+	\begin{equation}
+\lambda_{wave}=\frac{\sum _{i}{w}_{i}{\lambda }_{i}}{\sum _{i}{w}_{i}}
+\end{equation}
+\par where $w_i=\frac{1}{\sigma^2_i}$
+\\[\baselineskip]
+\par Error propagation:
+\begin{equation}
+{\sigma }_{f}=\sqrt{\sum _{i}^{n}{\left(\frac{\partial f}{\partial {x}_{i}}\right)}^{2}{\sigma }_{{x}_{i}}^{2}+\dots }
+\end{equation}
+\\[\baselineskip]
+\textbf{Experimental Procedure and Apparatus}\\[\baselineskip]
+\begin{center}
+	\advance\leftskip-1cm
+	\includegraphics[scale=0.4]{wulfelectroscope.png}
+\end{center}
+\begin{center}
+	\advance\leftskip-4cm
+	\begin{tabular}{|c |c|} \hline
+		Apparatus & Description \\ [0.5ex] 
+		\hline
+		Wulf's Electroscope & Discharges after getting hit so many times by ionized atoms/rays.\\ & The amount of charge needed for a discharge is constant. \\ 
+		\hline
+		Thorium Salt  & Decays to Radon gas that is pumped into the ionization chamber  \\
+		\hline
+		Ionization Chamber & Ionizes the gas inside via high voltage so decaying rays hit the Wulf's electroscope \\
+		\hline
+		HV Power Supply &Used to give high voltages to ionization chamber.\\
+		\hline
+		Stopwatch &Used to measure the time of discharges. \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\par The experimental procedure as follows:
+\\[\baselineskip]
+\par After the circuit is connected like the figure above, we connect the pump consisting thorium salt to the ionization chamber and open the valve on the pump.
+\\[\baselineskip]
+\par We open the HV power supply and set the value voltage to 2500V. We squeeze the gas in the pump consisting the thorium salt 5 times and start our stopwatch. We record the time of the every discharge until we observe couple of discharges. After these, we empty the Radon gas in the ionization chamber and repeat the procedure for 10 and 15 squeezes.
+\\[\baselineskip]
+\par We repeat the same procedure for 3000V,3500V,4000V and 4500V.
+\\[\baselineskip]
+ \textbf{Data}\\[\baselineskip]
+ \begin{center}
+ 	\begin{figure} [H]
+ 	\advance\leftskip-2cm
+ 	\begin{tabular}{|c |c| c|c|} \hline
+ 		$t_{discharge\ number}$ (seconds) &  time for 5 squeezes & time for 10 squeezes & time for 15 squeezes \\ [0.5ex] 
+ 		\hline
+ 		$t_1$ & 11.46 & 9.03  &8.38 \\ 
+ 		\hline
+ 		$t_2$  & 27.89 &22.81  &22.55 \\
+ 		\hline
+ 		$t_3$ & 47.94 & 39.44&39.71 \\
+ 		\hline
+ 		$t_4$ & 77.14 & 60.54& 61.42\\
+ 		\hline
+ 	$t_5$ & 122.12 & 89.69&90.89\\
+ 		\hline
+ 			$t_6$ & 227.67 & 137.69 & 138.69\\
+ 		\hline
+ 	\end{tabular}
+ \caption{Data for 2500V}
+\end{figure}
+ \end{center}
+
+ \begin{center}
+	\begin{figure} [H]
+		\advance\leftskip-2cm
+		\begin{tabular}{|c |c| c|c|} \hline
+			$t_{discharge\ number}$ (seconds) &  time for 5 squeezes & time for 10 squeezes & time for 15 squeezes \\ [0.5ex] 
+			\hline
+			$t_1$ & 1.85 & 1.51 &5.23\\ 
+			\hline
+			$t_2$  & 16.54 &13.10  &17.84 \\
+			\hline
+			$t_3$ & 35.02 & 27.78&33.86 \\
+			\hline
+			$t_4$ & 60.53 & 45.14& 53.30\\
+			\hline
+			$t_5$ & 97.62 & 66.20 &81.39\\
+			\hline
+			$t_6$ & 166.86 & 95.03 & 122.68\\
+			\hline
+			$t_7$ & - & - & 208.89\\
+			\hline
+		\end{tabular}
+		\caption{Data for 3000V}
+	\end{figure}
+\end{center}
+
+ \begin{center}
+	\begin{figure} [H]
+		\advance\leftskip-2cm
+		\begin{tabular}{|c |c| c|c|} \hline
+			$t_{discharge\ number}$ (seconds) &  time for 5 squeezes & time for 10 squeezes & time for 15 squeezes \\ [0.5ex] 
+			\hline
+			$t_1$ & 5.83 & 10.48 &6.28\\ 
+			\hline
+			$t_2$  & 20.62&24.45  &25.82 \\
+			\hline
+			$t_3$ & 38.93 & 41.18& 52.94\\
+			\hline
+			$t_4$ & 62.45 & 62.80& 95.58\\
+			\hline
+			$t_5$ &97.21 & 92.48 &174.24\\
+			\hline
+			$t_6$ & 158.92 & 139.24& -\\
+			\hline
+			
+		\end{tabular}
+		\caption{Data for 3500V}
+	\end{figure}
+\end{center}
+
+ \begin{center}
+	\begin{figure} [H]
+		\advance\leftskip-2cm
+		\begin{tabular}{|c |c| c|c|} \hline
+			$t_{discharge\ number}$ (seconds) &  time for 5 squeezes & time for 10 squeezes & time for 15 squeezes \\ [0.5ex] 
+			\hline
+			$t_1$ & 8.55 & 18.28 &10.77\\ 
+			\hline
+			$t_2$  & 23.13&45.05 &24.09 \\
+			\hline
+			$t_3$ & 40.32 & 87.10& 41.95\\
+			\hline
+			$t_4$ & 62.01 & 180.22& 65.59\\
+			\hline
+			$t_5$ &92.46 & - &101.10\\
+			\hline
+			$t_6$ & 141.94 & -& 170.02\\
+			\hline
+			
+		\end{tabular}
+		\caption{Data for 4000V}
+	\end{figure}
+\end{center}
+
+\begin{center}
+	\begin{figure} [H]
+		\advance\leftskip-2cm
+		\begin{tabular}{|c |c| c|c|} \hline
+			$t_{discharge\ number}$ (seconds) &  time for 5 squeezes & time for 10 squeezes & time for 15 squeezes \\ [0.5ex] 
+			\hline
+			$t_1$ & 8.61 & 2.89 &13.41\\ 
+			\hline
+			$t_2$  & 22.21&18.86 &29.91 \\
+			\hline
+			$t_3$ &40.75 & 39.80& 50.07\\
+			\hline
+			$t_4$ & 65.14 & 62.95& 77.15\\
+			\hline
+			$t_5$ &99.25 & 98.29 &117.72\\
+			\hline
+			$t_6$ & 157.75 & 164.00& 204.43\\
+			\hline
+			
+		\end{tabular}
+		\caption{Data for 4500V}
+	\end{figure}
+\end{center}
+
+\par Error for every data point is 0.10 second! This is our observational limit.
+\newpage
+\textbf{Analysis}\\[\baselineskip]
+\begin{figure}[H]
+	
+	\includegraphics[scale=1]{linefit.eps}
+	
+	\caption{R-square: 0.9999. I use R square instead of chi square because matlab is causing problems in chi-square calculations.As R square gets closer to 1, better the fit. Here, the fit is almost perfect! Also $T=\frac {t_i+t_{i+1}}{2}$ }
+	\end{figure}
+\par Since errors are too small, error bars seem too small, especially for the horizontal bars!
+\\[\baselineskip]
+\par From the slope of this curve we found :  $\lambda_2=0.01278 \mp  0.00095$ (1/sec)
+\\[\baselineskip]
+\par Other curves are not graphed but their slopes are given below.
+\par Slope of the 5 squeeze in 2500V: $\lambda_1=0.01204 \mp 0.00105$ (1/sec)
+\par Slope of the 15 squeeze in 2500V: $\lambda_3=0.01221  \mp 0.00010$ (1/sec)
+\\[\baselineskip]
+\par Slope of the 5 squeeze in 3000V:  $\lambda_4=0.01255\mp 0.00054 $ (1/sec)
+\par Slope of the 10 squeeze in 3000V:  $\lambda_5=0.01605\mp 0.00172$ (1/sec)
+\par Slope of the 15 squeeze in 3000V: $\lambda_6=0.01235\mp 0.00049$ (1/sec)
+ \\[\baselineskip]
+\par Slope of the 5 squeeze in 3500V:$\lambda_7=0.01247 \mp0.00023$ (1/sec)
+\par Slope of the 10 squeeze in 3500V:$\lambda_8=0.01234 \mp 0.00022$  (1/sec)
+\par Slope of the 15 squeeze in 3500V: $\lambda_9=0.01163 \mp 0.00139$ (1/sec)
+\\[\baselineskip]
+\par Slope of the 5 squeeze in 4000V:$\lambda_{10}=0.01219 \mp 0.00031$ (1/sec)
+\par Slope of the 10 squeeze in 4000V:$\lambda_{11}=0.01216 \mp 0.00215$ (1/sec)
+\par Slope of the 15 squeeze in 4000V:$\lambda_{12}=0.01369 \mp 0.00072$ (1/sec)
+\\[\baselineskip]
+\par Slope of the 5 squeeze in 4500V:$\lambda_{13}=0.01254 \mp 0.00098$ (1/sec)
+\par Slope of the 10 squeeze in 4500V:$\lambda_{14}= 0.01162 \mp 0.00112$  (1/sec)
+\par Slope of the 15 squeeze in 4500V:$\lambda_{15}=0.01196 \mp 0.00012$ (1/sec)
+\\[\baselineskip]
+\par From these $\lambda$s we find  $\lambda_{w.ave}= 0.0122 \mp 0.0001$ (1/sec)
+\\[\baselineskip]
+\par As said earlier, once we know $\lambda$ we can find $t_{\frac{1}{2}}$ and by using error propagation we can find its error:
+\begin{equation}
+t_{\frac{1}{2}}=\frac{ln(2)}{\lambda_{w.ave}}
+\end{equation}
+\begin{center}
+\begin{equation}
+t_{\frac{1}{2}}=56.8 \mp 0.5 sec
+\end{equation}
+\end{center}
+
+\textbf{Conclusion}\\[\baselineskip]
+\par The real value for half life of radon gas is given to us as 55.6 seconds. Our experimental value is 56.8 seconds and our value is 2.4$\sigma$ away from the real value. I think being 2.4$\sigma$ away from the real value is acceptable considering the errors. First of all we should look at the errors caused by us. we might not have squeezed the pump equally in all squeezes. We cannot observe  times lower than tenth of a second and we might not observe everything in the edge of our observational limits, thus possibly causing the error to be higher. We might not have emptied the chamber as well etc.
+Also there are systematic errors. Voltage supply may not work perfectly at all times, Wulf's electroscope is very sensitive and can be charged from rays coming from the space. The list goes on. Maybe we can take data in longer time intervals to reduce errors.
+
+\par We have seen that half life is independent of number of squeezes and the given voltage since we see that almost all of the $\lambda$s are very close to each other. This is obviously very reasonable result because we know that the half life of an atom is dependent on the characteristics of the atom not to the environmental effects.
+\\[\baselineskip]
+I have used matlab for data analysis and Latex for writing the report. My code and latex files are in the following link:
+\\[\baselineskip]
+https://github.com/OnuraySancar/phys442-radioactive.git
+\\[\baselineskip]
+\textbf{References}\\[\baselineskip]
+\par Advanced Physics Experiments - Gulmez, Prof. Dr. Erhan
+\\[\baselineskip]
+\par  Basic Data Analysis for Experiments in the Physical Sciences - Erhan Gulmez
+\\[\baselineskip]
+\par http://www.wikizeroo.net/index.php?q=aHR0cHM6Ly9lbi53aW\\tpcGVkaWEub3JnL3dpa2kvUmFkaW9hY3RpdmVfZGVjYXk
+\end{document}
